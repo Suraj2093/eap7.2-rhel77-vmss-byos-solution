@@ -1,9 +1,9 @@
 {
   "location": {
-    "value": "centralus"
+    "value": "westus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL8-BYOS-VMSS2"
+    "value": "EAP72-RHEL77-BYOS-VMSS2"
   },
   "adminUsername": {
     "value": "demouser"
@@ -15,7 +15,7 @@
     "value": "demoPassword1!"
   },
   "vmSize": {
-    "value": "Standard_DS2_v2"
+    "value": "Standard_E4s_v4"
   },
   "instanceCount": {
     "value": "2"
@@ -24,36 +24,36 @@
     "value": "existing"
   },
   "virtualNetworkName": {
-    "value": "RHEL8-EXT-VNET1"
+    "value": "EXT-VNET1"
   },
   "addressPrefixes": {
     "value": [
-      "10.4.0.0/16"
+      "10.3.0.0/16"
     ]
   },
   "subnetName": {
-    "value": "EXT-RHEL8-Subnet1"
+    "value": "EXT-subnet-Rg1"
   },
   "subnetPrefix": {
-    "value": "10.4.0.0/24"
+    "value": "10.3.0.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "RHEL8-EXT-VNET-Rg1"
+    "value": "EXt-Resource-Rg1"
   },
   "publicIpNewOrExisting": {
-    "value": "new"
+    "value": "existing"
   },
   "publicIpName": {
-    "value": "EAP72-RHEL8-VMSS-ip2"
+    "value": "EAP-RHEL-VMSS-Basic-pip1"
   },
   "publicIpDns": {
-    "value": "eap72-rhel8-byos-vmss2-86b8177f2a"
+    "value": "eap-rhel-vmss-basic-pip1"
   },
   "publicIpResourceGroupName": {
-    "value": "EAP72-RHEL8-byos-VMSS-Soln-Test-Rg2"
+    "value": "EXt-Resource-Rg1"
   },
   "publicIPAllocationMethod": {
-    "value": "Static"
+    "value": "Dynamic"
   },
   "publicIpSku": {
     "value": "Basic"
