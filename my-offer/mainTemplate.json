@@ -265,7 +265,7 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2019-05-01",
-            "name": "pid-79289471-45ce-45d0-a4d9-413d011c217c",
+            "name": "pid-a8587704-219c-4e98-b578-b5af8abba053",
             "properties": {
                 "mode": "Incremental",
                 "template": {
@@ -383,9 +383,9 @@
                 "capacity": "[parameters('instanceCount')]"
             },
             "plan": {
-                "name": "jboss-72-rhel-80-byos",
+                "name": "jboss-72-rhel-77-byos",
                 "publisher": "redhat",
-                "product": "jboss-eap72-rhel8"
+                "product": "jboss-eap-rhel7"
             },
             "dependsOn": [
                 "[variables('loadBalancersName')]",
@@ -407,8 +407,8 @@
                         },
                         "imageReference": {
                             "publisher": "redhat",
-                            "offer": "jboss-eap72-rhel8",
-                            "sku": "jboss-72-rhel-80-byos",
+                            "offer": "jboss-eap-rhel7",
+                            "sku": "jboss-72-rhel-77-byos",
                             "version": "latest"
                         }
                     },
