@@ -1,9 +1,9 @@
 {
   "location": {
-    "value": "westus"
+    "value": "eastus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS1"
+    "value": "EAP72-RHEL77-BYOS-VMSS3"
   },
   "adminUsername": {
     "value": "demouser"
@@ -12,19 +12,19 @@
     "value": "sshPublicKey"
   },
   "adminPasswordOrSSHKey": {
-    "value": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAhS0Te9hV+NZ+t/tdNL3Njkqnk05fJ5QNzASWClVILrn5f9lZ+xdeGkqEkYNquqvK17hWCCyIJ//4Q4x3wgKkYID0AqG+1iBseaE8GRjLZIVjXh5ciDUyFJJYk5DxmF60UX3lqXNkUQNMWPbsp4oP8YkxiCxxlhJmw9y2ndGPGpsw01wpU4YSX1qDcrL0kV/vR8lMnE4X8ZOh64zkBTuXEjaSXCKY+DfYvhWbUy6q+pTzWNfNmuacDxjboxPXTXWHGLp7rzVNfknYbwzyXH6Gmzfu0I1HWZYGr9EiaNEkq6WL7ZblBhwSjxT0PJv1A/hks6eLetF+YQ2oubJTXU/Wsw=="
+    "value": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEApJgvnXOg4OzPsCCk8xlGuFkAquazghXu8X9Xdfpvp+nGNEl8SJrDy2qQXNnuzKdfHsTCk773xIzBaTdDmEBb7pnRq5qHb6zQ1fEPsT+6r+MUj36KbLJxat67vKdulogHQ1N+l+dfmpe+rQhg2Bzw8DAZOVHYrsK1yV2LUXtU+0c4bdtxdJ5VEYChN7Wo6uK/1+w+EUEn9sykIGu+SDWUwYuYd4Oku1d8HirccJts/ZYSExs46oe5zHxggrNZ/agXt/wRaQNyBPha4VPY1x6iET98BxGIbORk9MeUBI/8NS9KXNKPYdSN3EeR98ATQ0ECP9b52M+Lz1YhQVdR3am/fQ=="
   },
   "vmSize": {
-    "value": "Standard_DS2_v2"
+    "value": "Standard_E2s_v4"
   },
   "instanceCount": {
-    "value": "3"
+    "value": "2"
   },
   "virtualNetworkNewOrExisting": {
     "value": "new"
   },
   "virtualNetworkName": {
-    "value": "EAP72-RHEL77-BYOS-Vmss1-VNET1"
+    "value": "VirtualNetwork"
   },
   "addressPrefixes": {
     "value": [
@@ -32,51 +32,39 @@
     ]
   },
   "subnetName": {
-    "value": "EAP72-RHEL77-VMSS1-Subnet1"
+    "value": "Subnet-1"
   },
   "subnetPrefix": {
-    "value": "10.5.5.0/24"
+    "value": "10.5.0.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg1"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg3"
   },
   "publicIpNewOrExisting": {
-    "value": "existing"
-  },
-  "publicIpName": {
-    "value": "EAP73-RHEL8-VMSS-STD-pip1"
-  },
-  "publicIpDns": {
-    "value": "eap73-rhel8-vmss-std-pip1"
-  },
-  "publicIpResourceGroupName": {
-    "value": "EXt-Resource-Rg1"
-  },
-  "publicIPAllocationMethod": {
-    "value": "Static"
-  },
-  "publicIpSku": {
-    "value": "Standard"
-  },
-  "bootDiagnostics": {
-    "value": "On"
-  },
-  "storageNewOrExisting": {
     "value": "new"
   },
-  "storageAccountName": {
-    "value": "eap72rheaf41de7ssrp"
+  "publicIpName": {
+    "value": "EAP72-RHEL77-BYOS-VMSS3-ip"
   },
-  "storageAccountType": {
-    "value": "Standard_GRS"
+  "publicIpDns": {
+    "value": "eap72-rhel77-byos-vmss3-188121f918"
+  },
+  "publicIpResourceGroupName": {
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg3"
+  },
+  "publicIPAllocationMethod": {
+    "value": "Dynamic"
+  },
+  "bootDiagnostics": {
+    "value": "Off"
   },
   "storageReplication": {
-    "value": "Standard_ZRS"
+    "value": "Standard_LRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
   },
   "jbossEAPPassword": {
-    "value": "demoPassword1!"
+    "value": "demoPassword1&"
   }
 }
