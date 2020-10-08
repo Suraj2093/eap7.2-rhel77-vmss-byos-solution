@@ -1,9 +1,9 @@
 {
   "location": {
-    "value": "westus2"
+    "value": "eastus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS5"
+    "value": "EAP72-RHEL77-BYOS-VMSS8"
   },
   "adminUsername": {
     "value": "demouser"
@@ -12,65 +12,59 @@
     "value": "password"
   },
   "adminPasswordOrSSHKey": {
-    "value": "demoPassword1&"
+    "value": "demoPassword1!"
   },
   "vmSize": {
-    "value": "Standard_F8s_v2"
+    "value": "Standard_DS2_v2"
   },
   "instanceCount": {
-    "value": "3"
+    "value": "2"
   },
   "virtualNetworkNewOrExisting": {
     "value": "new"
   },
   "virtualNetworkName": {
-    "value": "EAP72-RHEL77-Soln-VMSS-VNET5"
+    "value": "VirtualNetwork"
   },
   "addressPrefixes": {
     "value": [
-      "10.5.0.0/16"
+      "10.6.0.0/16"
     ]
   },
   "subnetName": {
-    "value": "EAP72-rhel77-subnet1"
+    "value": "Subnet-1"
   },
   "subnetPrefix": {
-    "value": "10.5.5.0/24"
+    "value": "10.6.0.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg5"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg8"
   },
   "publicIpNewOrExisting": {
-    "value": "none"
+    "value": "new"
+  },
+  "publicIpName": {
+    "value": "EAP72-RHEL77-BYOS-VMSS8-ip"
   },
   "publicIpDns": {
-    "value": ""
+    "value": "eap72-rhel77-byos-vmss8-4a1015d9ad"
   },
   "publicIpResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg5"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg8"
   },
-  "publicIpSku": {
-    "value": "Basic"
+  "publicIPAllocationMethod": {
+    "value": "Dynamic"
   },
   "bootDiagnostics": {
-    "value": "On"
-  },
-  "storageNewOrExisting": {
-    "value": "existing"
-  },
-  "storageAccountName": {
-    "value": "bootstrg4vv2jf3mwhrqe"
-  },
-  "storageAccountType": {
-    "value": "Standard_LRS"
+    "value": "Off"
   },
   "storageReplication": {
-    "value": "Standard_GRS"
+    "value": "Standard_LRS"
   },
   "jbossEAPUserName": {
-    "value": "demouser1"
+    "value": "demouser"
   },
   "jbossEAPPassword": {
-    "value": "demoPassword1&"
+    "value": "demoPassword1!"
   }
 }
