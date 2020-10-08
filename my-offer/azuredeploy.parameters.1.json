@@ -3,7 +3,7 @@
     "value": "westus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS4"
+    "value": "EAP72-RHEL77-BYOS-VMSS7"
   },
   "adminUsername": {
     "value": "demouser"
@@ -41,16 +41,16 @@
     "value": "EXt-Resource-Rg1"
   },
   "publicIpNewOrExisting": {
-    "value": "existing"
+    "value": "new"
   },
   "publicIpName": {
-    "value": "EAP73-RHEL8-VMSS-STD-pip1"
+    "value": "EAP72-RHEL77-BYOS-VMSS7-pip1"
   },
   "publicIpDns": {
-    "value": "eap73-rhel8-vmss-std-pip1"
+    "value": "eap72-rhel77-vmss7-6a4e6116d1"
   },
   "publicIpResourceGroupName": {
-    "value": "EXt-Resource-Rg1"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg7"
   },
   "publicIPAllocationMethod": {
     "value": "Static"
@@ -62,16 +62,16 @@
     "value": "On"
   },
   "storageNewOrExisting": {
-    "value": "existing"
+    "value": "new"
   },
   "storageAccountName": {
-    "value": "diagstrgeap73"
+    "value": "eap72rhe33368e9409"
   },
   "storageAccountType": {
     "value": "Standard_LRS"
   },
   "storageReplication": {
-    "value": "Premium_LRS"
+    "value": "Standard_LRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
