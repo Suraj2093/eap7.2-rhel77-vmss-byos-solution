@@ -1,9 +1,9 @@
 {
   "location": {
-    "value": "westus"
+    "value": "westus2"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS2"
+    "value": "EAP72-RHEL77-BYOS-VMSS5"
   },
   "adminUsername": {
     "value": "demouser"
@@ -12,62 +12,65 @@
     "value": "password"
   },
   "adminPasswordOrSSHKey": {
-    "value": "demoPassword1!"
+    "value": "demoPassword1&"
   },
   "vmSize": {
-    "value": "Standard_E4s_v4"
+    "value": "Standard_F8s_v2"
   },
   "instanceCount": {
-    "value": "2"
+    "value": "3"
   },
   "virtualNetworkNewOrExisting": {
-    "value": "existing"
+    "value": "new"
   },
   "virtualNetworkName": {
-    "value": "EXT-VNET1"
+    "value": "EAP72-RHEL77-Soln-VMSS-VNET5"
   },
   "addressPrefixes": {
     "value": [
-      "10.3.0.0/16"
+      "10.5.0.0/16"
     ]
   },
   "subnetName": {
-    "value": "EXT-subnet-Rg1"
+    "value": "EAP72-rhel77-subnet1"
   },
   "subnetPrefix": {
-    "value": "10.3.0.0/24"
+    "value": "10.5.5.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EXt-Resource-Rg1"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg5"
   },
   "publicIpNewOrExisting": {
-    "value": "existing"
-  },
-  "publicIpName": {
-    "value": "EAP-RHEL-VMSS-Basic-pip1"
+    "value": "none"
   },
   "publicIpDns": {
-    "value": "eap-rhel-vmss-basic-pip1"
+    "value": ""
   },
   "publicIpResourceGroupName": {
-    "value": "EXt-Resource-Rg1"
-  },
-  "publicIPAllocationMethod": {
-    "value": "Dynamic"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg5"
   },
   "publicIpSku": {
     "value": "Basic"
   },
   "bootDiagnostics": {
-    "value": "Off"
+    "value": "On"
+  },
+  "storageNewOrExisting": {
+    "value": "existing"
+  },
+  "storageAccountName": {
+    "value": "bootstrg4vv2jf3mwhrqe"
+  },
+  "storageAccountType": {
+    "value": "Standard_LRS"
   },
   "storageReplication": {
-    "value": "Standard_LRS"
+    "value": "Standard_GRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
   },
   "jbossEAPPassword": {
-    "value": "demoPassword1!"
+    "value": "demoPassword1&"
   }
 }
