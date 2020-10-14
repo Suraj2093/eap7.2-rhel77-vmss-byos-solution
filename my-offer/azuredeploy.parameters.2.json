@@ -1,9 +1,9 @@
 {
   "location": {
-    "value": "eastus"
+    "value": "eastus2"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS8"
+    "value": "EAP72-RHEL77-BYOS-VMSS9"
   },
   "adminUsername": {
     "value": "demouser"
@@ -18,7 +18,7 @@
     "value": "Standard_DS2_v2"
   },
   "instanceCount": {
-    "value": "2"
+    "value": "1"
   },
   "virtualNetworkNewOrExisting": {
     "value": "new"
@@ -38,19 +38,19 @@
     "value": "10.6.0.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg8"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg9"
   },
   "publicIpNewOrExisting": {
     "value": "new"
   },
   "publicIpName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS8-ip"
+    "value": "EAP72-RHEL77-BYOS-VMSS9-ip"
   },
   "publicIpDns": {
-    "value": "eap72-rhel77-byos-vmss8-4a1015d9ad"
+    "value": "eap72-rhel77-byos-vmss9-c8ac70d095"
   },
   "publicIpResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg8"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg9"
   },
   "publicIPAllocationMethod": {
     "value": "Dynamic"
@@ -62,7 +62,7 @@
     "value": "Standard_LRS"
   },
   "jbossEAPUserName": {
-    "value": "demouser"
+    "value": "demouser1"
   },
   "jbossEAPPassword": {
     "value": "demoPassword1!"
