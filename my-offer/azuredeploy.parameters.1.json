@@ -3,7 +3,7 @@
     "value": "westus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS5"
+    "value": "EAP72-RHEL77-BYOS-VMSS10"
   },
   "adminUsername": {
     "value": "demouser"
@@ -15,42 +15,48 @@
     "value": "demoPassword1!"
   },
   "vmSize": {
-    "value": "Standard_F8s_v2"
+    "value": "Standard_E2s_v4"
   },
   "instanceCount": {
     "value": "2"
   },
   "virtualNetworkNewOrExisting": {
-    "value": "new"
+    "value": "existing"
   },
   "virtualNetworkName": {
-    "value": "VirtualNetwork"
+    "value": "EXT-VNET1"
   },
   "addressPrefixes": {
     "value": [
-      "10.5.0.0/16"
+      "10.3.0.0/16"
     ]
   },
   "subnetName": {
-    "value": "Subnet-1"
+    "value": "EXt-new-subnet4-nsg"
   },
   "subnetPrefix": {
-    "value": "10.5.0.0/24"
+    "value": "10.3.1.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg5"
+    "value": "EXt-Resource-Rg1"
   },
-  "publicIpNewOrExisting": {
-    "value": "none"
+  "publicIpNewOrExistingOrNone": {
+    "value": "new"
+  },
+  "publicIpName": {
+    "value": "EAP72-RHEL77-BYOS-VMSS10-std-pip"
   },
   "publicIpDns": {
-    "value": ""
+    "value": "eap72-rhel77-byos-vmss10-stdpip1"
   },
   "publicIpResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg5"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg10"
+  },
+  "publicIPAllocationMethod": {
+    "value": "Static"
   },
   "publicIpSku": {
-    "value": "Basic"
+    "value": "Standard"
   },
   "bootDiagnostics": {
     "value": "On"
@@ -64,13 +70,16 @@
   "storageAccountType": {
     "value": "Standard_LRS"
   },
+  "storageAccountKind": {
+    "value": "Storage"
+  },
   "storageReplication": {
-    "value": "Standard_GRS"
+    "value": "Standard_ZRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
   },
   "jbossEAPPassword": {
-    "value": "demoPassword1&"
+    "value": "demoPassword1!"
   }
 }
