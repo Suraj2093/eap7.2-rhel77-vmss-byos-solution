@@ -291,10 +291,10 @@
             "name": "[if(equals(parameters('publicIpNewOrExistingOrNone'),'none'), 'PublicIp', parameters('publicIpName'))]",
             "location": "[parameters('location')]",
             "sku": {
-                "name": "[if(equals(variables('publicIpSkuCheck'), 'True'), 'Standard' , 'Basic')]"
+                "name": "[if(equals(variables('publicIpSkuCheck'), 'true'), 'Standard' , 'Basic')]"
             },
             "properties": {
-                "publicIPAllocationMethod": "[if(equals(variables('publicIPAllocationMethodCheck'), 'True'), 'Static' , 'Dynamic')]",
+                "publicIPAllocationMethod": "[if(equals(variables('publicIPAllocationMethodCheck'), 'true'), 'Static' , 'Dynamic')]",
                 "dnsSettings": {
                     "domainNameLabel": "[parameters('publicIpDns')]"
                 }
@@ -390,10 +390,10 @@
                 "[parameters('virtualNetworkName')]",
                 "[variables('jbStorageAccountName')]",
                 "[if(equals(parameters('bootDiagnostics'),'On'), parameters('storageAccountName'), parameters('virtualNetworkName'))]",
-                "[if(equals(variables('publicIpSkuCheck'), 'True'), variables('networkSecurityGroupName'), variables('jbStorageAccountName'))]"
+                "[if(equals(variables('publicIpSkuCheck'), 'true'), variables('networkSecurityGroupName'), variables('jbStorageAccountName'))]"
             ],
             "properties": {
-                "singlePlacementGroup": "[if(equals(variables('instanceCountCheck'), 'True'), 'false' , 'true')]",
+                "singlePlacementGroup": "[if(equals(variables('instanceCountCheck'), 'true'), 'false' , 'true')]",
                 "overprovision": "false",
                 "upgradePolicy": {
                     "mode": "Manual"
@@ -444,7 +444,7 @@
                                     }
                                 }
                                 ],
-                                "networkSecurityGroup": "[if(equals(variables('publicIpSkuCheck'), 'True'), variables('networkSecurityGroupId') , json('null'))]"
+                                "networkSecurityGroup": "[if(equals(variables('publicIpSkuCheck'), 'true'), variables('networkSecurityGroupId') , json('null'))]"
                             }
                         }
                         ]
@@ -480,7 +480,7 @@
             "name": "[variables('loadBalancersName')]",
             "location": "[parameters('location')]",
             "sku": {
-                "name": "[if(equals(variables('publicIpSkuCheck'), 'True'), 'Standard' , 'Basic')]"
+                "name": "[if(equals(variables('publicIpSkuCheck'), 'true'), 'Standard' , 'Basic')]"
             },
             "dependsOn": [
                 "[if(equals(parameters('publicIpNewOrExistingOrNone'),'none'), parameters('virtualNetworkName'), parameters('publicIpName'))]"
