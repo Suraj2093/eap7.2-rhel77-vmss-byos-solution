@@ -220,7 +220,10 @@
         "containerName": "eapblobcontainer",
         "singlequote": "'",
         "nicName": "[concat(uniquestring(resourceGroup().id), '-nic')]",
-        "bootdiagnosticscheck": "[and(equals(parameters('storageNewOrExisting'), 'new'), equals(parameters('bootDiagnostics'),'On'))]",
+        "bootDiagnosticsCheck": "[and(equals(parameters('storageNewOrExisting'), 'new'), equals(parameters('bootDiagnostics'),'On'))]",
+        "publicIpSkuCheck": "[or(equals(parameters('publicIpSku'), 'Standard'), greater(parameters('instanceCount'), '100'))]",
+        "publicIPAllocationMethodCheck": "[or(equals(parameters('publicIPAllocationMethod'), 'Static'), greater(parameters('instanceCount'), '100'))]",
+        "instanceCountCheck": "[greater(parameters('instanceCount'), '100')]",
         "jbStorageAccountName": "[concat('jbosstrg', uniqueString(resourceGroup().id))]",
         "publicIpAddressId": {
             "id": "[resourceId(parameters('publicIpResourceGroupName'), 'Microsoft.Network/publicIPAddresses', parameters('publicIpName'))]"
@@ -271,7 +274,7 @@
             }
         },
         {
-            "condition": "[variables('bootdiagnosticscheck')]",
+            "condition": "[variables('bootDiagnosticsCheck')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
             "name": "[parameters('storageAccountName')]",
@@ -288,17 +291,17 @@
             "name": "[if(equals(parameters('publicIpNewOrExistingOrNone'),'none'), 'PublicIp', parameters('publicIpName'))]",
             "location": "[parameters('location')]",
             "sku": {
-                "name": "[if(equals(parameters('publicIpSku'), 'Standard'), 'Standard' , 'Basic')]"
+                "name": "[if(equals(variables('publicIpSkuCheck'), 'True'), 'Standard' , 'Basic')]"
             },
             "properties": {
-                "publicIPAllocationMethod": "[parameters('publicIPAllocationMethod')]",
+                "publicIPAllocationMethod": "[if(equals(variables('publicIPAllocationMethodCheck'), 'True'), 'Static' , 'Dynamic')]",
                 "dnsSettings": {
                     "domainNameLabel": "[parameters('publicIpDns')]"
                 }
             }
         },
         {
-            "condition": "[equals(parameters('publicIpSku'), 'Standard')]",
+            "condition": "[variables('publicIpSkuCheck')]",
             "type": "Microsoft.Network/networkSecurityGroups",
             "apiVersion": "2019-08-01",
             "name": "[variables('networkSecurityGroupName')]",
@@ -387,9 +390,10 @@
                 "[parameters('virtualNetworkName')]",
                 "[variables('jbStorageAccountName')]",
                 "[if(equals(parameters('bootDiagnostics'),'On'), parameters('storageAccountName'), parameters('virtualNetworkName'))]",
-                "[if(equals(parameters('publicIpSku'),'Standard'), variables('networkSecurityGroupName'), variables('jbStorageAccountName'))]"
+                "[if(equals(variables('publicIpSkuCheck'), 'True'), variables('networkSecurityGroupName'), variables('jbStorageAccountName'))]"
             ],
             "properties": {
+                "singlePlacementGroup": "[if(equals(variables('instanceCountCheck'), 'True'), 'false' , 'true')]",
                 "overprovision": "false",
                 "upgradePolicy": {
                     "mode": "Manual"
@@ -440,7 +444,7 @@
                                     }
                                 }
                                 ],
-                                "networkSecurityGroup": "[if(equals(parameters('publicIpSku'), 'Standard'), variables('networkSecurityGroupId') , json('null'))]"
+                                "networkSecurityGroup": "[if(equals(variables('publicIpSkuCheck'), 'True'), variables('networkSecurityGroupId') , json('null'))]"
                             }
                         }
                         ]
@@ -476,7 +480,7 @@
             "name": "[variables('loadBalancersName')]",
             "location": "[parameters('location')]",
             "sku": {
-                "name": "[if(equals(parameters('publicIpSku'), 'Standard'), 'Standard' , 'Basic')]"
+                "name": "[if(equals(variables('publicIpSkuCheck'), 'True'), 'Standard' , 'Basic')]"
             },
             "dependsOn": [
                 "[if(equals(parameters('publicIpNewOrExistingOrNone'),'none'), parameters('virtualNetworkName'), parameters('publicIpName'))]"
@@ -582,5 +586,21 @@
         }
     ],
     "outputs": {
+        "bootDiagnosticsCheck": {
+        "type": "bool",
+        "value": "[variables('bootDiagnosticsCheck')]"
+        },
+        "publicIpSkuCheck": {
+        "type": "bool",
+        "value": "[variables('publicIpSkuCheck')]"
+        },
+        "publicIPAllocationMethodCheck": {
+        "type": "bool",
+        "value": "[variables('publicIPAllocationMethodCheck')]"
+        },
+        "instanceCountCheck": {
+        "type": "bool",
+        "value": "[variables('instanceCountCheck')]"
+        }
     }
 }
