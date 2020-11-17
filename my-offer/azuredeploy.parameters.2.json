@@ -1,9 +1,9 @@
 {
   "location": {
-    "value": "eastus2"
+    "value": "eastus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS9"
+    "value": "EAP72-RHEL77-BYOS-VMSS12"
   },
   "adminUsername": {
     "value": "demouser"
@@ -18,7 +18,7 @@
     "value": "Standard_DS2_v2"
   },
   "instanceCount": {
-    "value": "1"
+    "value": "3"
   },
   "virtualNetworkNewOrExisting": {
     "value": "new"
@@ -28,35 +28,50 @@
   },
   "addressPrefixes": {
     "value": [
-      "10.6.0.0/16"
+      "10.4.0.0/16"
     ]
   },
   "subnetName": {
     "value": "Subnet-1"
   },
   "subnetPrefix": {
-    "value": "10.6.0.0/24"
+    "value": "10.4.0.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg9"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg12"
   },
-  "publicIpNewOrExisting": {
+  "publicIpNewOrExistingOrNone": {
     "value": "new"
   },
   "publicIpName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS9-ip"
+    "value": "EAP72-RHEL77-BYOS-VMSS12-ip"
   },
   "publicIpDns": {
-    "value": "eap72-rhel77-byos-vmss9-c8ac70d095"
+    "value": "eap72-rhel77-byos-vmss12-74848359c1"
   },
   "publicIpResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg9"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg12"
   },
   "publicIPAllocationMethod": {
     "value": "Dynamic"
   },
+  "publicIpSku": {
+    "value": "Basic"
+  },
   "bootDiagnostics": {
-    "value": "Off"
+    "value": "On"
+  },
+  "storageNewOrExisting": {
+    "value": "new"
+  },
+  "storageAccountName": {
+    "value": "eap72rhe47a6469bbf"
+  },
+  "storageAccountType": {
+    "value": "Standard_LRS"
+  },
+  "storageAccountKind": {
+    "value": "Storage"
   },
   "storageReplication": {
     "value": "Standard_LRS"
@@ -65,6 +80,6 @@
     "value": "demouser1"
   },
   "jbossEAPPassword": {
-    "value": "demoPassword1!"
+    "value": "demoPassword1&"
   }
 }
