@@ -1,24 +1,24 @@
 {
   "location": {
-    "value": "eastus"
+    "value": "westus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS11"
+    "value": "EAP72-RHEL77-BYOS-VMSS16"
   },
   "adminUsername": {
     "value": "demouser"
   },
   "authenticationType": {
-    "value": "password"
+    "value": "sshPublicKey"
   },
   "adminPasswordOrSSHKey": {
-    "value": "demoPassword1!"
+    "value": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlviaRGPDfb39/yPz926EUmnav+z5fvE8REcgtMewI+kQ7uAFW5/XB5OuKjortM8mk4y0NyXQj6gv9dA5LMQx5COICXcdwIOaEOGReQtISYsmDWLn+z4ujkkYzR0S1srW/u9DPNebCFNZ7Dhgpl673p7Yv+9bvdJppy08rNQuzW6VvLIzm2V6z2zUteI8Ym/S011egTuCE/aQee6fA/1xNW0GefMcCFY7ARa3K9DHh9Hm0csiARhTflW0u0OgPdK3c+NNUjT5cmSMaE23mnV+bv/r5pTJyd68xWGyn6vNSJJNTpeMtBs4Ki+gSqwAOtlgwOeyBSAwMLvBKiOhDDAxTw== rsa-key-20201118"
   },
   "vmSize": {
-    "value": "Standard_DS2_v2"
+    "value": "Standard_DS1_v2"
   },
   "instanceCount": {
-    "value": "2"
+    "value": "101"
   },
   "virtualNetworkNewOrExisting": {
     "value": "new"
@@ -28,35 +28,35 @@
   },
   "addressPrefixes": {
     "value": [
-      "10.1.0.0/16"
+      "10.0.0.0/16"
     ]
   },
   "subnetName": {
     "value": "Subnet-1"
   },
   "subnetPrefix": {
-    "value": "10.1.0.0/24"
+    "value": "10.0.0.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg11"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg16"
   },
   "publicIpNewOrExistingOrNone": {
-    "value": "new"
+    "value": "existing"
   },
   "publicIpName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS11-ip"
+    "value": "EAP-RHEL-VMSS-Basic-pip1"
   },
   "publicIpDns": {
-    "value": "eap72-rhel77-byos-vmss11-12bdc3597d"
+    "value": "eap-rhel-vmss-basic-pip1"
   },
   "publicIpResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg11"
+    "value": "EXt-Resource-Rg1"
   },
   "publicIPAllocationMethod": {
-    "value": "Static"
+    "value": "Dynamic"
   },
   "publicIpSku": {
-    "value": "Standard"
+    "value": "Basic"
   },
   "bootDiagnostics": {
     "value": "On"
@@ -65,7 +65,7 @@
     "value": "new"
   },
   "storageAccountName": {
-    "value": "eap72rhe2f201c78c5"
+    "value": "eap72rhe8425966085"
   },
   "storageAccountType": {
     "value": "Standard_LRS"
@@ -74,7 +74,7 @@
     "value": "Storage"
   },
   "storageReplication": {
-    "value": "Standard_LRS"
+    "value": "Standard_GRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
