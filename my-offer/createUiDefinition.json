@@ -81,11 +81,11 @@
                         "name": "instanceCount",
                         "type": "Microsoft.Common.TextBox",
                         "label": "Number of Virtual Machine Scale Set instance count",
-                        "toolTip": "Number of Virtual Machine Scale Set instance count (less than 100)",
+                        "toolTip": "Number of Virtual Machine Scale Set instance count (less than 1000)",
                         "constraints": {
                             "required": true,
-                            "regex": "^[1-9][0-9]{0,1}$",
-                            "validationMessage": "The VMSS instance count recommended value is between 2 to 100."
+                            "regex": "^[1-9][0-9]{0,2}$",
+                            "validationMessage": "The VMSS instance count recommended value is between 1 to 1000."
                         }
                     },
                     {

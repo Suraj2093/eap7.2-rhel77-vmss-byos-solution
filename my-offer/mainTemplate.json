@@ -48,7 +48,7 @@
         "instanceCount": {
             "type": "String",
             "metadata": {
-                "description": "Number of VM instances (less than 100)"
+                "description": "Number of VM instances (less than 1000)"
             }
         },
         "bootDiagnostics": {
