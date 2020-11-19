@@ -80,7 +80,7 @@
                     {
                         "name": "instanceCount",
                         "type": "Microsoft.Common.TextBox",
-                        "defaultValue": 2,
+                        "defaultValue": "2",
                         "label": "Number of Virtual Machine Scale Set instance count",
                         "toolTip": "Number of Virtual Machine Scale Set instance count (less than 1000)",
                         "constraints": {
@@ -125,7 +125,7 @@
                     {
                         "name": "publicIpAddress",
                         "type": "Microsoft.Network.PublicIpAddressCombo",
-                        "visible": "[less(steps('VirtualMachineScaleSetConfig').instanceCount, 100)]",
+                        "visible": "[less(int(steps('VirtualMachineScaleSetConfig').instanceCount), 100)]",
                         "label": {
                             "publicIpAddress": "Public IP Address for the Load Balancer",
                             "domainNameLabel": "DNS Prefix for the public IP Address"
@@ -153,7 +153,7 @@
                         "type": "Microsoft.Common.TextBox",
                         "label": "Public IP Name for the Load Balancer",
                         "toolTip": "Public IP Name for the Load Balancer",
-                        "visible": "[greaterOrEquals(steps('VirtualMachineScaleSetConfig').instanceCount, 100)]",
+                        "visible": "[greaterOrEquals(int(steps('VirtualMachineScaleSetConfig').instanceCount), 100)]",
                         "defaultValue": "[concat(basics('vmssName'), '-ip')]",
                         "constraints": {
                             "required": true,
