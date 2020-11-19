@@ -3,42 +3,42 @@
     "value": "westus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS16"
+    "value": "EAP72-RHEL77-BYOS-VMSS14"
   },
   "adminUsername": {
     "value": "demouser"
   },
   "authenticationType": {
-    "value": "sshPublicKey"
+    "value": "password"
   },
   "adminPasswordOrSSHKey": {
-    "value": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlviaRGPDfb39/yPz926EUmnav+z5fvE8REcgtMewI+kQ7uAFW5/XB5OuKjortM8mk4y0NyXQj6gv9dA5LMQx5COICXcdwIOaEOGReQtISYsmDWLn+z4ujkkYzR0S1srW/u9DPNebCFNZ7Dhgpl673p7Yv+9bvdJppy08rNQuzW6VvLIzm2V6z2zUteI8Ym/S011egTuCE/aQee6fA/1xNW0GefMcCFY7ARa3K9DHh9Hm0csiARhTflW0u0OgPdK3c+NNUjT5cmSMaE23mnV+bv/r5pTJyd68xWGyn6vNSJJNTpeMtBs4Ki+gSqwAOtlgwOeyBSAwMLvBKiOhDDAxTw== rsa-key-20201118"
+    "value": "demoPassword1!"
   },
   "vmSize": {
-    "value": "Standard_DS1_v2"
+    "value": "Standard_DS2_v2"
   },
   "instanceCount": {
-    "value": "101"
+    "value": "2"
   },
   "virtualNetworkNewOrExisting": {
-    "value": "new"
+    "value": "existing"
   },
   "virtualNetworkName": {
-    "value": "VirtualNetwork"
+    "value": "EXT-VNET1"
   },
   "addressPrefixes": {
     "value": [
-      "10.0.0.0/16"
+      "10.3.0.0/16"
     ]
   },
   "subnetName": {
-    "value": "Subnet-1"
+    "value": "EXT-New-subnet8"
   },
   "subnetPrefix": {
-    "value": "10.0.0.0/24"
+    "value": "10.3.8.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg16"
+    "value": "EXt-Resource-Rg1"
   },
   "publicIpNewOrExistingOrNone": {
     "value": "existing"
@@ -59,27 +59,15 @@
     "value": "Basic"
   },
   "bootDiagnostics": {
-    "value": "On"
-  },
-  "storageNewOrExisting": {
-    "value": "new"
-  },
-  "storageAccountName": {
-    "value": "eap72rhe8425966085"
-  },
-  "storageAccountType": {
-    "value": "Standard_LRS"
-  },
-  "storageAccountKind": {
-    "value": "Storage"
+    "value": "Off"
   },
   "storageReplication": {
-    "value": "Standard_GRS"
+    "value": "Standard_RAGRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
   },
   "jbossEAPPassword": {
-    "value": "demoPassword1&"
+    "value": "demoPassword1!"
   }
 }
