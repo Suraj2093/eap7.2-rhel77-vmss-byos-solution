@@ -1,85 +1,58 @@
 {
   "location": {
-    "value": "eastus"
+    "value": "centralus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS11"
+    "value": "EAP72-RHEL77-BYOS-VMSS21"
   },
   "adminUsername": {
     "value": "demouser"
   },
   "authenticationType": {
-    "value": "password"
+    "value": "sshPublicKey"
   },
   "adminPasswordOrSSHKey": {
-    "value": "demoPassword1!"
+    "value": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA6PSVuDt4NgJfQlRt8sPXRyQ+XY9hSZ1zS9MtJtEILKeoUkaUe0GpELLmARzr/qH0HkM5DulgCkfPPD4WxWHJ6tQWkys2wFKxnXD/kX8aZ0Ad6v8PmwwRt/sX268zcKt25w3cO/xSfBHmDpo+kUVbzIrMhvQOKqJ2lpfsQUVI1B0jhxgd/VNLteQE0ABF4dEOjS+UJOrsIUfzUanMT8r6g5d7VpaOFqYK21ltTTuBd1hIBE+05yqdIziWl1fm2nGK5GBUme8bawQjxsw5PfuM6GJQLyYe+ml8ur0Zzlf6HSh6b+uRCWQMwVJhDXpJ8htG+AVdZ1iiresmVhkR+75rsQ== rsa-key-20201119"
   },
   "vmSize": {
-    "value": "Standard_B2ms"
+    "value": "Standard_DS1_v2"
   },
   "instanceCount": {
-    "value": "2"
+    "value": "126"
   },
   "virtualNetworkNewOrExisting": {
     "value": "new"
   },
   "virtualNetworkName": {
-    "value": "VirtualNetwork-new"
+    "value": "VirtualNetwork-new21"
   },
   "addressPrefixes": {
     "value": [
-      "10.10.0.0/16"
+      "10.4.0.0/16"
     ]
   },
   "subnetName": {
     "value": "Subnet-1new"
   },
   "subnetPrefix": {
-    "value": "10.10.2.0/24"
+    "value": "10.4.1.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg11"
+    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg21"
   },
-  "publicIpNewOrExistingOrNone": {
-    "value": "new"
-  },
-  "publicIpName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS11-stdip"
-  },
-  "publicIpDns": {
-    "value": "eap72-rhel77-byos-vmw5ss11-4b567f987f"
-  },
-  "publicIpResourceGroupName": {
-    "value": "EAP72-RHEL77-byos-VMSS-Soln-Test-Rg11"
-  },
-  "publicIPAllocationMethod": {
-    "value": "Static"
-  },
-  "publicIpSku": {
-    "value": "Standard"
+  "publicIpNameNew": {
+    "value": "EAP72-RHEL77-BYOS-VMSS21-stdip"
   },
   "bootDiagnostics": {
-    "value": "On"
-  },
-  "storageNewOrExisting": {
-    "value": "new"
-  },
-  "storageAccountName": {
-    "value": "eap72rh7erv1grs"
-  },
-  "storageAccountType": {
-    "value": "Standard_GRS"
-  },
-  "storageAccountKind": {
-    "value": "Storage"
+    "value": "Off"
   },
   "storageReplication": {
-    "value": "Standard_ZRS"
+    "value": "Standard_LRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
   },
   "jbossEAPPassword": {
-    "value": "demoPassword1&"
+    "value": "demoPassword1!"
   }
 }
