@@ -15,7 +15,7 @@
     "value": "demoPassword1!"
   },
   "vmSize": {
-    "value": "Standard_DS2_v2"
+    "value": "Standard_DS1_v2"
   },
   "instanceCount": {
     "value": "100"
