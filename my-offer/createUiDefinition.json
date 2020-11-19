@@ -151,9 +151,10 @@
                     {
                         "name": "publicIpAddressNew",
                         "type": "Microsoft.Common.TextBox",
-                        "label": "Public IP Address for the Load Balancer",
-                        "toolTip": "Public IP Address for the Load Balancer",
+                        "label": "Public IP Name for the Load Balancer",
+                        "toolTip": "Public IP Name for the Load Balancer",
                         "visible": "[greaterOrEquals(steps('VirtualMachineScaleSetConfig').instanceCount, 100)]",
+                        "defaultValue": "[concat(basics('vmssName'), '-ip')]",
                         "constraints": {
                             "required": true,
                             "regex": "^[a-z0-9A-Z][a-z0-9A-Z._-]{0,75}[a-z0-9A-Z_]{1}$",
