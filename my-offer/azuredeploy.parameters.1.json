@@ -3,7 +3,7 @@
     "value": "westus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS14"
+    "value": "EAP72-RHEL77-BYOS-VMSS18"
   },
   "adminUsername": {
     "value": "demouser"
@@ -15,10 +15,10 @@
     "value": "demoPassword1!"
   },
   "vmSize": {
-    "value": "Standard_DS2_v2"
+    "value": "Standard_D2s_v3"
   },
   "instanceCount": {
-    "value": "2"
+    "value": "110"
   },
   "virtualNetworkNewOrExisting": {
     "value": "existing"
@@ -32,42 +32,39 @@
     ]
   },
   "subnetName": {
-    "value": "EXT-New-subnet8"
+    "value": "EXt-new-subnet6"
   },
   "subnetPrefix": {
-    "value": "10.3.8.0/24"
+    "value": "10.3.4.0/24"
   },
   "virtualNetworkResourceGroupName": {
     "value": "EXt-Resource-Rg1"
   },
-  "publicIpNewOrExistingOrNone": {
-    "value": "existing"
-  },
-  "publicIpName": {
-    "value": "EAP-RHEL-VMSS-Basic-pip1"
-  },
-  "publicIpDns": {
-    "value": "eap-rhel-vmss-basic-pip1"
-  },
-  "publicIpResourceGroupName": {
-    "value": "EXt-Resource-Rg1"
-  },
-  "publicIPAllocationMethod": {
-    "value": "Dynamic"
-  },
-  "publicIpSku": {
-    "value": "Basic"
+  "publicIpNameNew": {
+    "value": "EAP72-RHEL77-BYOS4-VMSS18-ip"
   },
   "bootDiagnostics": {
-    "value": "Off"
+    "value": "On"
+  },
+  "storageNewOrExisting": {
+    "value": "existing"
+  },
+  "storageAccountName": {
+    "value": "diagstrgeap73"
+  },
+  "storageAccountType": {
+    "value": "Standard_LRS"
+  },
+  "storageAccountKind": {
+    "value": "Storage"
   },
   "storageReplication": {
-    "value": "Standard_RAGRS"
+    "value": "Standard_GRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
   },
   "jbossEAPPassword": {
-    "value": "demoPassword1!"
+    "value": "demoPassword1&"
   }
 }
