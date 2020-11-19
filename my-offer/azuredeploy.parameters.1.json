@@ -3,7 +3,7 @@
     "value": "westus"
   },
   "vmssName": {
-    "value": "EAP72-RHEL77-BYOS-VMSS18"
+    "value": "EAP72-RHEL77-BYOS-VMSS17"
   },
   "adminUsername": {
     "value": "demouser"
@@ -15,10 +15,10 @@
     "value": "demoPassword1!"
   },
   "vmSize": {
-    "value": "Standard_D2s_v3"
+    "value": "Standard_F8s_v2"
   },
   "instanceCount": {
-    "value": "110"
+    "value": "2"
   },
   "virtualNetworkNewOrExisting": {
     "value": "existing"
@@ -32,25 +32,25 @@
     ]
   },
   "subnetName": {
-    "value": "EXt-new-subnet6"
+    "value": "EXT-subnet-Rg1"
   },
   "subnetPrefix": {
-    "value": "10.3.4.0/24"
+    "value": "10.3.0.0/24"
   },
   "virtualNetworkResourceGroupName": {
     "value": "EXt-Resource-Rg1"
   },
-  "publicIpNameNew": {
-    "value": "EAP72-RHEL77-BYOS4-VMSS18-ip"
+  "publicIpNewOrExistingOrNone": {
+    "value": "none"
   },
   "bootDiagnostics": {
     "value": "On"
   },
   "storageNewOrExisting": {
-    "value": "existing"
+    "value": "new"
   },
   "storageAccountName": {
-    "value": "diagstrgeap73"
+    "value": "eap72rhe61ae7130af"
   },
   "storageAccountType": {
     "value": "Standard_LRS"
@@ -59,7 +59,7 @@
     "value": "Storage"
   },
   "storageReplication": {
-    "value": "Standard_GRS"
+    "value": "Standard_LRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
