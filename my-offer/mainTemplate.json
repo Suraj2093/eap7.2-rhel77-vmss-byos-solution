@@ -595,21 +595,5 @@
         }
     ],
     "outputs": {
-        "bootDiagnosticsCheck": {
-        "type": "bool",
-        "value": "[variables('bootDiagnosticsCheck')]"
-        },
-        "publicIpSkuCheck": {
-        "type": "bool",
-        "value": "[variables('publicIpSkuCheck')]"
-        },
-        "publicIPAllocationMethodCheck": {
-        "type": "bool",
-        "value": "[variables('publicIPAllocationMethodCheck')]"
-        },
-        "instanceCountCheck": {
-        "type": "bool",
-        "value": "[variables('instanceCountCheck')]"
-        }
     }
 }
